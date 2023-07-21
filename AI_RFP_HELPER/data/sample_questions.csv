@@ -1,5 +1,6 @@
 Sr No,Questions
-1,Does snyk have a single tenant option and what regions are multi tenancy and single tenancy supported in?
-2,Does Snyk store user behavior anaylics?
-3,How long does Snyk store my code and what is retained after that period relating to my code?
-4,What does Snyk store related to my Kubernetes configuration?
+1,Does snyk have a single tenant option?
+2,What region is Snyk supported in?
+3,Does Snyk store user behavior analytics?
+4,How long does Snyk store my source code?
+5,What information does Snyk score about my kubernetes integrations and container registry integrations?

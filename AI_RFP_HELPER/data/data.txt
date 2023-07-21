@@ -39,6 +39,5 @@ Snyk accesses and stores RUN instructions from Dockerfile.
 Kubernetes configurations - Snyk accesses workload security settings (for example, ‘run as root’). This is only accessed if you use Snyk’s Kubernetes integration.
 Container registry integrations - Snyk accesses and then stores a short term copy of the container image (unless a broker is used). This copy is removed from the Snyk network after analysis.
 
-The above is helpful information about how Snyk handles data to help you answer questions. You will be passed a series of questions. Please separate your
-reply to each question with Answer: followed by the answer. If you are asked multiple questions your response to each question should have Answer: followed by
-the individual answer. Example you are asked three questions. Each time you see ? it is a new question. Respond with the question: {question that was asked} then the answer number: {your answer}
+The above is helpful information about how Snyk handles data to help you answer questions. You will be passed a series of questions. Please reply to each question with Answer to Question {num}
+e.g Answer to Question 1: Answer to Question 2, etc.
