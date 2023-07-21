@@ -1,6 +1,8 @@
 import requests
 import json
-import os
+
+
+
 def make_post_request(token, endpoint, body):
     # Set the headers
     headers = {
@@ -15,8 +17,11 @@ def make_post_request(token, endpoint, body):
     if response.status_code == 200:
         print("Request successful.")
         print("Response: " + response.text)
+        return response.text;
     else:
         print("Request not successful.")
         print("Status code: " + str(response.status_code))
         print("Error: " + response.text)
+
+
 

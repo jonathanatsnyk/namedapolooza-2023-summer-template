@@ -1,0 +1,7 @@
+Question,Answer
+"?Question 1: Does Snyk have a single tenant option and what regions are multi tenancy and single tenancy supported in?
+Answer: Yes, Snyk offers a single tenant option called Single-Tenant SaaS. As for the supported regions, multi-tenant and single-tenant options are currently supported in the US, EU, and AUS. Additional regions may be supported in the future.","?Question 2: Does Snyk store user behavior analytics?
+Answer: Yes, Snyk stores user behavior analytics. This includes various types of information pertaining to usage patterns, such as platform navigation and executed CLI commands."
+"?Question 3: How long does Snyk store my code, and what is retained after that period relating to my code?
+Answer: Snyk retains your code for a limited period of time to ensure accurate analysis. The specific retention period will vary depending on the context and purpose of the data. After the retention period, your code is deleted from the Snyk system, with the exception of any anonymized and aggregated data that may be retained for analytical purposes.","?Question 4: What does Snyk store related to my Kubernetes configuration?
+Answer: Snyk stores workload security settings related to your Kubernetes configuration, such as ""run as root"" settings. However, it's important to note that Snyk only accesses this information if you are using Snyk's Kubernetes integration."

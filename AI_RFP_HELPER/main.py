@@ -2,8 +2,10 @@
 import os
 import json
 from scripts import AI_CALL
+from scripts import ReadCSV
+from scripts import generate_answers
+token = os.environ["SNYK_API_TOKEN"];
 
-token = "";
 
 def read_data_from_file():
     # Get the current script directory
@@ -18,11 +20,23 @@ def read_data_from_file():
 
     return data
 
+
 # Read the data from the file
 
 context = read_data_from_file()
 # If the data is in JSON format, convert it to a Python dictionary
 
+# get the csv data
+# Define the path to sample_questions.csv
+data_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data')
+csv_file_path = os.path.join(data_dir, 'sample_questions.csv')
+
+# Pass the path to the function in ReadCSV
+questionsArr = ReadCSV.read_csv(csv_file_path)
+
+questionsStr = ' '.join(questionsArr)
+
+print('The questions are ', questionsStr)
 body = {
     "model": "gpt-3.5-turbo",
     "messages": [
@@ -32,11 +46,14 @@ body = {
         },
         {
             "role": "user",
-            "content": "how is snyk data encrypted? "
+            "content": questionsStr
         }
     ]
 }
 
 # call the function
-AI_CALL.make_post_request(token,
-                          'https://api.openai.com/v1/chat/completions', body)
+
+response = AI_CALL.make_post_request(token, 'https://api.openai.com/v1/chat/completions', body)
+
+generate_answers.generate(response)
+
